@@ -12,7 +12,7 @@ public class Shapes {
 		// Make polymorphic method calls:
 		for (Shape shp : s) {
 			shp.draw();
-			shp.exercise3();
+			//shp.exercise3();
 		}
 		
 	}
