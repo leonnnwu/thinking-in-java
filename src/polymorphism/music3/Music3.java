@@ -1,5 +1,7 @@
 package polymorphism.music3;
 
+import java.util.Random;
+
 import polymorphism.music.Note;
 
 class Instrument {
@@ -82,6 +84,43 @@ class Woodwind extends Wind {
 	}
 }
 
+class Piano extends Instrument {
+	void play(Note n) {
+		System.out.println("Piano.play() " + n);
+	}
+
+	String what() {
+		return "Piano";
+	}
+
+	void adjust() {
+		System.out.println("Adjusting Piano");
+	}
+}
+
+class RandomInstrumentGenerator{
+	private Random random = new Random(34);
+	
+	public Instrument next() {
+		switch (random.nextInt(6)) {
+		default:
+		case 0:
+			return new Wind();
+		case 1:
+			return new Percussion();
+		case 2:
+			return new Stringed();
+		case 3:
+			return new Brass();
+		case 4:
+			return new Woodwind();
+		case 5:
+			return new Piano();
+		
+		}
+	}
+}
+
 public class Music3 {
 
 	public static void tune(Instrument i) {
@@ -97,13 +136,13 @@ public class Music3 {
 	}
 	
 	public static void main(String[] args) {
-		Instrument[] orchestra = {
-			      new Wind(),
-			      new Percussion(),
-			      new Stringed(),
-			      new Brass(),
-			      new Woodwind()
-			};
+		RandomInstrumentGenerator generator = new RandomInstrumentGenerator();
+		
+		Instrument[] orchestra = new Instrument[9];
+		
+		for (int i = 0; i < orchestra.length; i++) {
+			orchestra[i] = generator.next();
+		}
 		
 		tuneAll(orchestra);
 	}
