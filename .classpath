@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="reusing/Detergent.java|reusing/E03_CartoonWithDefCtor.java|reusing/SpaceShip.java|reusing/SpaceShipControls.java|reusing/SpaceShipDelegation.java|reusing/E011_DetergentDelegation.java" kind="src" path="src"/>
+	<classpathentry excluding="reusing/Detergent.java|reusing/E03_CartoonWithDefCtor.java|reusing/SpaceShip.java|reusing/SpaceShipControls.java|reusing/SpaceShipDelegation.java|reusing/E011_DetergentDelegation.java|polymorphism/music/Instrument.java|polymorphism/music/Music.java|polymorphism/music/Music2.java|polymorphism/music/Note.java|polymorphism/music/Wind.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
