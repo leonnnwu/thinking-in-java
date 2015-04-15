@@ -11,5 +11,10 @@ public class Square extends Shape {
 	public void erase() {
 		System.out.println("Square.erase()");
 	}
+	
+	@Override
+	public void exercise3() {
+		System.out.println("Exercise3 - Square");
+	}
 
 }
