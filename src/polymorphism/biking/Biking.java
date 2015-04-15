@@ -27,6 +27,10 @@ class Unicycle extends Cycle {
 	public int wheels() {
 		return 1;
 	}
+	
+	public void balance() {
+		System.out.println("Balance -  Unicycle");
+	}
 }
 
 class Bicycle extends Cycle {
@@ -38,6 +42,10 @@ class Bicycle extends Cycle {
 	
 	public int wheels() {
 		return 2;
+	}
+	
+	public void balance() {
+		System.out.println("Balance -  Bicycle");
 	}
 	
 }
@@ -63,13 +71,15 @@ public class Biking {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Unicycle unicycle = new Unicycle();
-		Bicycle bicycle = new Bicycle();
-		Tricycle tricycle = new Tricycle();
+		Cycle unicycle = new Unicycle();
+		Cycle bicycle = new Bicycle();
+		Cycle tricycle = new Tricycle();
 		
-		ride(unicycle);
-		ride(bicycle);
-		ride(tricycle);
+		//ride(unicycle);
+		//ride(bicycle);
+		//ride(tricycle);
+		
+		//unicycle.balance();
 	}
 
 }
