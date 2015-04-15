@@ -11,6 +11,10 @@ class Cycle {
 		return this.name;
 	}
 	
+	public int wheels() {
+		return 0;
+	}
+	
 }
 
 class Unicycle extends Cycle {
@@ -18,6 +22,10 @@ class Unicycle extends Cycle {
 	
 	public String toString() {
 		return this.name;
+	}
+	
+	public int wheels() {
+		return 1;
 	}
 }
 
@@ -28,6 +36,10 @@ class Bicycle extends Cycle {
 		return this.name;
 	}
 	
+	public int wheels() {
+		return 2;
+	}
+	
 }
 
 class Tricycle extends Cycle {
@@ -36,12 +48,17 @@ class Tricycle extends Cycle {
 	public String toString() {
 		return this.name;
 	}
+	
+	public int wheels() {
+		return 3;
+	}
 }
 
 public class Biking {
 	
 	public static void ride(Cycle c) {
 		Cycle.travel(c);
+		System.out.println("Number of wheels: " + c.wheels());
 	}
 
 	public static void main(String[] args) {
