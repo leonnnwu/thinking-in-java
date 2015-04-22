@@ -1,9 +1,5 @@
 package interfaces.exercise;
 
-import sun.tools.tree.ThisExpression;
-
-import com.sun.xml.internal.bind.v2.runtime.RuntimeUtil.ToStringAdapter;
-
 interface BetTool{
 	void tossing();
 }
