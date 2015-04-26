@@ -109,6 +109,42 @@ public class GreenhouseControls extends Controller {
 			return "Thermostat on day setting";
 		}
 	}
+	
+	private boolean fan = false;
+	
+	public class FanOn extends Event {
+
+		public FanOn(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			fan = true;
+		}
+		
+		public String toString() {
+			return "Greenhouse fan is on";
+		}
+		
+	}
+	
+	public class FanOff extends Event {
+
+		public FanOff(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			fan = false;
+		}
+		
+		public String toString() {
+			return "Greenhouse fan is off";
+		}
+		
+	}
 
 	// An example of an action() that inserts a
 	// new one of itself into the event list:
