@@ -52,6 +52,13 @@ public class Shapes {
 		
 		// inconvertible types:
 		// ((Circle)r).draw();
+		
+		// Upcast
+		Shape shape = r;
+		shape.draw();
+		if(shape instanceof Rhomboid) {
+			System.out.println("It is a Rhomboid");
+		}
 	}
 	
 }
