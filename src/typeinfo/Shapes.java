@@ -38,6 +38,12 @@ class Rhomboid extends Shape {
 }
 
 public class Shapes {
+	
+	public static void rotate(Shape shape) {
+		if(shape instanceof Circle) {
+			System.out.println("It is Circle and can't rotate!");
+		}
+	}
 
 	public static void main(String[] args) {
 		// Upcasting
@@ -59,6 +65,9 @@ public class Shapes {
 		if(shape instanceof Rhomboid) {
 			System.out.println("It is a Rhomboid");
 		}
+		
+		Shape c = new Circle();
+		rotate(c);
 	}
 	
 }
