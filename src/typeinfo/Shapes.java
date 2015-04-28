@@ -6,6 +6,7 @@ import java.util.List;
 
 
 abstract class Shape {
+	boolean flag = false;
 	void draw() {
 		System.out.println(this + ".draw()");
 	}
@@ -15,25 +16,25 @@ abstract class Shape {
 
 class Circle extends Shape {
 	public String toString() {
-		return "Circle";
+		return (flag ? "H" : "Unh") + "ighlighted " +"Circle";
 	}
 }
 
 class Square extends Shape {
 	public String toString() {
-		return "Square";
+		return (flag ? "H" : "Unh") + "ighlighted " + "Square";
 	}
 }
 
 class Triangle extends Shape {
 	public String toString() {
-		return "Triangle";
+		return (flag ? "H" : "Unh") + "ighlighted " + "Triangle";
 	}
 }
 
 class Rhomboid extends Shape {
 	public String toString() {
-		return "Rhomboid";
+		return (flag ? "H" : "Unh") + "ighlighted " + "Rhomboid";
 	}
 }
 
@@ -44,14 +45,23 @@ public class Shapes {
 			System.out.println("It is Circle and can't rotate!");
 		}
 	}
+	
+	public static void setFlag(Shape s) {
+		if(s instanceof Triangle) {
+			s.flag = true;
+		}
+	}
 
 	public static void main(String[] args) {
 		// Upcasting
 		List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle(), new Rhomboid());
 		
 		// Downcasting
-		for(Shape shape : shapeList)
+		for(Shape shape : shapeList) {
+			setFlag(shape);
 			shape.draw();
+		}
+			
 		
 		Rhomboid r = new Rhomboid();
 		((Shape) r).draw();
