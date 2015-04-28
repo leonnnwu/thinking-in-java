@@ -31,12 +31,27 @@ class Triangle extends Shape {
 	}
 }
 
+class Rhomboid extends Shape {
+	public String toString() {
+		return "Rhomboid";
+	}
+}
+
 public class Shapes {
 
 	public static void main(String[] args) {
-		List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle());
+		// Upcasting
+		List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle(), new Rhomboid());
+		
+		// Downcasting
 		for(Shape shape : shapeList)
 			shape.draw();
+		
+		Rhomboid r = new Rhomboid();
+		((Shape) r).draw();
+		
+		// inconvertible types:
+		// ((Circle)r).draw();
 	}
 	
 }
